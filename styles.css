@@ -1,0 +1,47 @@
+* {
+    text-transform: uppercase;
+    text-align: center;
+    list-style-position: inside;
+    background-color: #4B6356;
+}
+
+h1 {
+    background-color: aquamarine;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+
+li {
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+}
+
+.collapsable{
+    background-color: #6d8b7b;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 20%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+
+}
+
+.active, .collapsable:hover {
+  background-color: #85a494;
+}
+
+.content {
+  /* padding: 0 18px; */
+  display: none;
+  overflow: hidden;
+  /* background-color: #ffffff; */
+}
+

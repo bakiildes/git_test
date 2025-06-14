@@ -4,36 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Homepage</h1>
-    <a href="https://www.theodinproject.com/about" target="_blank" rel=”noreferrer”>Odin Project About Page</a>
+    <h1>Mehmet Baki Ildes</h1>
     <ul>
-        <h2>My Favourite Foods</h2>    
-            <li>Pizza</li>
-            <li>Milkshake</li>
-            <li>Burger</li>
+            <button type="button" class="collapsable">My Favourite Foods</button>
+            <div class="content">
+                <li><br>Pizza</li>
+                <li><br>Milkshake</li>
+                <li><br>Burger</li>
+            </div>
     </ul>
     <ol>
-        <h2>To-Do's For Today</h2>
-            <li>Countinue on Odin</li>
-            <li>Do some laundry</li>
-            <li>Clean Dishes</li>
+        <button type="button" class="collapsable">To-Do's For Today</button>
+        <div class="content">
+            <li><br>Countinue on Odin</li>
+            <li><br>Do some laundry</li>
+            <li><br>Clean Dishes</li>
+            </div>
     </ol>
     <ul>
-        <h2>Places I want to visit</h2>
-            <li>Japan</li>
+        <button type="button" class="collapsable">Places I want to visit</button>
+         <div class="content">  
+            <li><br>Japan</li>
             <a href="https://en.wikipedia.org/wiki/Japan" target="_blank" rel="noreferrer"><img src="./images/jp-square-01.png" alt="Japan Flag" height="100" width="100"></a>
-            <li>Canada</li>
-            <li>Norway</li>
+            <li><br>Canada</li>
+            <li><br>Norway</li>
+            </div> 
     </ul>
     <ol>
-        <h2>Favourite Games and Movies</h2>
-            <li>Red Dead Redemption 2</li>
-            <li>Bioshock Infinite</li>
-            <li>Scott Pilgrim Saves The World</li>
+        <button type="button" class="collapsable">Favourite Games and Movies</button>
+        <div class="content">
+            <li><br>Red Dead Redemption 2</li>
+            <li><br>Bioshock Infinite</li>
+            <li><br>Scott Pilgrim Saves The World</li>
+            </div>
     </ol>
 
-    <a href="./pages/about.html">About Me</a>
+    <a class="about" href="./pages/about.html">About Me</a>
     
+    <script>
+var coll = document.getElementsByClassName("collapsable");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 </body>
